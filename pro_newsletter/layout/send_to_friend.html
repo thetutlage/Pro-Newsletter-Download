@@ -1,0 +1,23 @@
+<?php include("public_header.html"); ?>
+	<h2>Send '<?php echo $newsletter_data['subject'];?>' to a friend</h2>	
+	<?php if($success){ ?>
+		<p>Thank you, the newsletter was just delivered to your friend.</p>
+		<form action="" method="post">
+		<input type="submit" name="go" value="Send to another friend">
+		</form>
+	<?php }else{ ?>
+		<p>
+			Please enter your friends details into the form below
+		</p>
+		<form action="" method="post">
+			<input type="hidden" name="send" value="send">
+			<p>Email address: <input type="text" name="email" class="text_input"></p>
+			<p><input type="submit" name="send_email" value="Send Newsletter"></p>
+		</form>
+	<?php } ?>
+	<div style="border:1px solid #CCC; background-color:#EFEFEF; padding:10px; margin:5px;">
+	You can also <b>share</b> this newsletter on Facebook: 
+	<a name="fb_share" type="button" share_url="<?php echo 'http://'.$newsletter->base_href.'/ext.php?t=view&id='.$id;?>" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	</div>
+	
+<?php include("public_footer.html"); ?>

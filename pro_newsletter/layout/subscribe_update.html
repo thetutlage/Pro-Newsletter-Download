@@ -1,0 +1,8 @@
+<?php include("public_header.html"); ?>
+			<h2>Update your details below</h2>
+			<p>
+			Please enter your details in the form below and select which newsletter you would like to subscribe to by using the checkboxes.
+			</p>
+			<?php echo $form;?>
+			<span style="font-size:0.7em;">If you would like to unsubscribe completely from all notifications from <?php echo $newsletter->settings['name'];?> please <a href="?t=unsub_form">click here</a>.</span>
+<?php include("public_footer.html"); ?>

@@ -1,0 +1,6 @@
+<?php include("public_header.html"); ?>
+			<h2>Subscription</h2>
+			<?php if(!$message){ ?>
+			<p>Thank you! We have sent you an email confirming your newsletter subscription. </p><p>Please click the link in this email to continue.</p>
+			<?php }else{ echo $message; } ?>
+<?php include("public_footer.html"); ?>

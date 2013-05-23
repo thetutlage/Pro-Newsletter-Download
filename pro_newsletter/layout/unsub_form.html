@@ -1,0 +1,20 @@
+<?php include("public_header.html"); ?>
+			<h2>Unsubscribe</h2>
+			<?php 
+			if($message){
+				echo $message;
+			}else{ ?>
+			<div id="subscribe_form">
+				<p>Please enter your email address to unsubscribe:</p>
+				<form action="" method="post"> 
+				<div class="form_elements">
+					<label>Email</label><input type="text" name="email" value="" class="input_text"> 
+				</div>
+
+				<div class="form_elements">
+					<input type="submit" name="login" value="Unsubscribe">
+				</div>
+				</form>
+			</div>
+			<?php } ?>
+<?php include("public_footer.html"); ?>
